@@ -10,7 +10,14 @@ window.onload = function() {
 
 	myVoice.initialize(6601,"garameki.com");
 	myVoice.get("HELLO");
-//	myVoice.close();
+	var count = 0;
+	var hoge = setInterval(function() {
+		count++;
+		if(count>2){
+			clearInterval(hoge);
+			myVoice.close();
+		}
+	},1000);
 
 
 
