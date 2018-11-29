@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	<script type="application/javascript" src="/js/myClientImgStreamer.js"></script>
+	<script type="application/javascript" src="/js/myImgReplace.js"></script>
+	<script type="application/javascript" src="/js/myClientMax31856.js"></script>
+	<script type="application/javascript" src="/js/index.js"></script>
+	<title>がらめきドットコム</title>
+	</head>
+	<body id="body">
+		<div id="page">
+			<div id="top">
+				<h1 id="topHead">
+					<div id="topTitle">がらめきドットコム</div>
+					<div id="topSubtitle">RaspberryPi編</div>
+				</h1>
+			</div>
+			<div id="museum">
+			</div>
+			<div id="middle">
+				<div id="leftColumn">
+
+
+<!- コンテンツここから ->
+
+<div id="20181130" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/30</div>
+			<div class="leftDay">
+FRI</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181130.html">
+初代ラズパイを再設定</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+初代</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanUnsolved">
+未解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+初代ラズパイはGPIOをテストマシンと化す。Apache機能は残しておき、外部からログデータをGoogle Sheetなどで首都できるようにする。ホームページ機能は二代目に移管する。同じraspberrypiというprefixを使うが、ポート番号を800にして運用する。　SSHを有効化して、プログラムの保守を行う(本当はWindowsとUSBでつないでやりたい)。複数のプロセスを動かしたいが、SSHからやる方法をまだ知らない(ディスプレイとキーボードとマウスでGUI)。こうなると、はやくSSHで複数のプロセスを動かすやり方を手に入れなければ。
+	</div>
+</div>
+<div id="20181129" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/29</div>
+			<div class="leftDay">
+THU</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181129.html">
+SSHの有効化</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+SSH</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+ラズパイを２台にしたら、開発効率が一気に低下した。ラズパイ用のディスプレイとマウスとキーボードは1つしかないから。あまり気がすすまなかったけれど、コンソールから遠隔操作できるSSHを導入することにした。WindowsのRubyプロンプトやGitBashにはsshコマンドがすでに用意されているし、githubをSecureで使っていたこともあって、~/.sshには鍵が設定済だったし、ラズパイ側のSSHを手動でONにするだけで、簡単に行うことができた。これって、ポート番号22番
+今までのラズパイから、データを吸い出して、新しいラズパイに設定を移した。GPIOを使って操作するものは除いて、APACHE2の立ち上げまでを行った。
+	</div>
+</div>
+<div id="20181128" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/28</div>
+			<div class="leftDay">
+WED</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181128.html">
+2台目のラズパイ</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+今までのラズパイから、データを吸い出して、新しいラズパイに設定を移した。GPIOを使って操作するものは除いて、APACHE2の立ち上げまでを行った。
+	</div>
+</div>
+<div id="20181127" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/27</div>
+			<div class="leftDay">
+TUE</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181127.html">
+LCDを使ってみる</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+I2C</span>
+			<span class="leftCategorySpan">
+LCD</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+LCDモジュールを使ってみた。とりあえず、説明書の概観はとらえたと思う。これをどうやって表現に生かすかは、またの機会に。
+	</div>
+</div>
+<div id="20181126" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/26</div>
+			<div class="leftDay">
+MON</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181126.html">
+測定したデータをリアルタイムでグラフ化</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+GoogleSpreadSheets</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+googleのスプレッドシートに手作業で、温度のログをいれて、グラフを出してみたら、なんか良かった。それで、リアルタイムでグラフを自動描画したものをトップページに出したくなって、やってみたのがこの記事です。IFTTTも使わず、自分のHTTPサーバーにデータを取りに来てもらうので、とても楽に実現しました。
+	</div>
+</div>
+<div id="20181125" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/25</div>
+			<div class="leftDay">
+SUN</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181125.html">
+vimをメモ帳代わりに最初から最後までインサートモードで使う</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+vim</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+vimは日本語入力と相性が悪いことに2か月たって、やっと気が付きました。メモ帳の方が入力しやすいのですが、vimを使うときには、メモ帳ライクに使いたいものです。
+	</div>
+</div>
+<div id="20181124" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/24</div>
+			<div class="leftDay">
+SAT</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181124.html">
+USBメモリに保存したcsvデータをブラウザで見る</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+USBメモリ</span>
+			<span class="leftCategorySpan">
+csv</span>
+			<span class="leftCategorySpan">
+GoogleSpreadSheets</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+google spread sheetsに自分のデータを上げたいときに使えるように、csvデータをブラウザで確認できたら便利。今回は、そのデータがUSBメモリに入っているとして、どうやったらApache2がIndexesオプションを発揮できるのか、その設定を載せた備忘録。
+	</div>
+</div>
+<div id="20181123" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/23</div>
+			<div class="leftDay">
+FRI</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181123.html">
+MAX31856の温度をUSBに保存</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+MAX31856</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+MAX31856のデータをUSBに保存する
+	</div>
+</div>
+<div id="20181122" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/22</div>
+			<div class="leftDay">
+THU</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181122.html">
+I2Cで7seg4桁LEDの表示(3)</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+I2C</span>
+			<span class="leftCategorySpan">
+7seg-LED</span>
+			<span class="leftCategorySpan">
+HT16K33</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+せっかくのI2Cを使っているので、slaveを一つ増やしてみることにした。
+	</div>
+</div>
+<div id="20181121" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/21</div>
+			<div class="leftDay">
+WED</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181121.html">
+I2Cで7seg4桁LEDの表示(2)</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+I2C</span>
+			<span class="leftCategorySpan">
+7seg-LED</span>
+			<span class="leftCategorySpan">
+HT16K33</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+smbusというモジュールを使って、pythonからHT16K33というICとI2C通信して、現在時刻の分秒を表示させた。コロンは1秒に2回点滅させるようにした。それをリアルタイムカメラ映像で撮影し、トップページで見られるようにした。
+	</div>
+</div>
+<div id="20181120" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/20</div>
+			<div class="leftDay">
+TUE</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181120.html">
+I2Cで7seg4桁LEDの表示(1)</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+I2C</span>
+			<span class="leftCategorySpan">
+7seg-LED</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+AmazonでIPOTCHというところから4桁の7segment LEDモジュールを購入した。なんと、中国からメール便みたいなのが２日後に届いていた。2個で600円くらいしか買わなかったのに。済まない。しかし、ネットに使い方が載っていないので苦労した。幸い、Linuxにはi2cdetectみたいなコマンドがいくつか用意されていたので、それらを頼りに点灯試験を行った。ちなみに、このモジュールは、デジタル時計の表示用らしく、小数点が点灯しない。コロンは点灯する。実質的には、コロンを含めて5桁の制御となっている。このHT16K33というICに少し興味を惹かれた。
+	</div>
+</div>
+<div id="20181119" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/19</div>
+			<div class="leftDay">
+MON</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181119.html">
+websocketで音声の配信</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+websocket</span>
+			<span class="leftCategorySpan">
+AquesTalkPi</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+AquesTalkPiを使って、外部からのメッセージを、音声ファイルに変えて、再配信するwebsocketクライアントを作成した。
+	</div>
+</div>
+<div id="20181118" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/18</div>
+			<div class="leftDay">
+SUN</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181118.html">
+キャリアの足しにする</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+carrier</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+日々の努力が大切だと思うから、ここに載せておく。
+	</div>
+</div>
+<div id="20181117" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/17</div>
+			<div class="leftDay">
+SAT</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181117.html">
+websocket音声をブラウザで再生</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+Socket</span>
+			<span class="leftCategorySpan">
+Google Chrome</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+Base64を受信して、デコードし、音声を再生。をやってみた。バイナリに変換するのがとても時間がかかった。実質4日まるまる。
+	</div>
+</div>
+<div id="20181116" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/16</div>
+			<div class="leftDay">
+FRI</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181116.html">
+websocketブラウザのWinでの開発</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+Windows</span>
+			<span class="leftCategorySpan">
+Git</span>
+			<span class="leftCategorySpan">
+GitHub</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+windowsパソコンで、socketの開発
+	</div>
+</div>
+<div id="20181115" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/15</div>
+			<div class="leftDay">
+THU</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181115.html">
+Gitのブランチ名をプロンプトに表示</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+Rasbian</span>
+			<span class="leftCategorySpan">
+Git</span>
+			<span class="leftCategorySpan">
+LXTerminal</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+ソケットサーバーを多数立ち上げたら、Raspberry Piの動作が遅くなってきた。やはり、デスクトップとしては力不足だ。chromiumuの検索は結果が表示されるのに10秒くらい待つ。もう、SSHしかないのかな。でも、しない。
+	</div>
+</div>
+<div id="20181114" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/14</div>
+			<div class="leftDay">
+WED</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181114.html">
+windowsでも開発</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+GitHub</span>
+			<span class="leftCategorySpan">
+Windows</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+ソケットサーバーを多数立ち上げたら、Raspberry Piの動作が遅くなってきた。やはり、デスクトップとしては力不足だ。chromiumuの検索は結果が表示されるのに10秒くらい待つ。もう、SSHしかないのかな。でも、しない。
+	</div>
+</div>
+<div id="20181113" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/13</div>
+			<div class="leftDay">
+TUE</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181113.html">
+httpsを正式導入</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+Apache2</span>
+			<span class="leftCategorySpan">
+SSL/TLS</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+ブラウザから情報を発信しようとすると、ブラウザの認証に引っかかる。それは、使い手にとって安心すべきことだ。しかし、作り手にとっては大きな壁だ。正式なサーバー証明書を手に入れた。
+	</div>
+</div>
+<div id="20181112" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/12</div>
+			<div class="leftDay">
+MON</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181112.html">
+映像配信</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+openCV</span>
+			<span class="leftCategorySpan">
+websocket</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+映像のストリーミング。サーバーにアクセスするだけで全世界からカメラ前の様子を見ることが出来ます。(複数接続可)
+	</div>
+</div>
+<div id="20181111" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/11</div>
+			<div class="leftDay">
+SUN</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181111.html">
+OpenCVをimport cv2する</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+openCV</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+映像のストリーミングを試したくて、OpenCVを導入しようとしたが、なかなかimport cv2ができなくて...やっとできた。
+	</div>
+</div>
+<div id="20181110" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/10</div>
+			<div class="leftDay">
+SAT</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181110.html">
+USBメモリへrsync -aでバックアップ</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+rsync</span>
+			<span class="leftCategorySpan">
+USB</span>
+
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+バックアップしたつもりが、出来ていなかった。また、すべてを失うところだった。LINUXのうるさいパーミッションとFAT32でフォーマットされたUSBメモリの相性のなんと悪いことか。買ったままでのUSBメモリへは、rsyncのaオプションを使っても、所有者、所有グループ、パーミッションのコピーはできない。
+	</div>
+</div>
+<div id="20181109" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/09</div>
+			<div class="leftDay">
+FRI</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181109.html">
+定点撮影画像を載せる</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+webcamera</span>
+
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+応用すれば空の定点撮影とかできますね。雲がぐわぐわ動く様子を連続で流せば、面白いかも。ちなみに、ここでは撮影するだけで、加工とかはしません。
+	</div>
+</div>
+<div id="20181108" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/08</div>
+			<div class="leftDay">
+THU</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181108.html">
+測定温度リアルタイム配信</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+websocket-server</span>
+			<span class="leftCategorySpan">
+websocket-client</span>
+			<span class="leftCategorySpan">
+max31856</span>
+
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+websocketサーバーを立ち上げて、そこに温度をリアルタイムに配信するクライアントを接続して、更にそこにブラウザも接続して、そのブラウザに温度をリアルタイムで表示するようにした。温度配信クライアントは特定のクライアントにのみ情報を発信するようにwebsocketサーバーに司令を出すことができる。また、ブラウザクライアントも自分が何者であるかをwebsocketサーバーに知らせることができる。という仕組みを簡易的に取り入れてもみた。
+	</div>
+</div>
+<div id="20181107" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/07</div>
+			<div class="leftDay">
+WED</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181107.html">
+websocketで<br>client(ブラウザ)-client(ブラウザ)<br>間通信</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+websocket-server</span>
+			<span class="leftCategorySpan">
+websocket-client</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+今回もPithikosさんのwebsocket-serverを使用。これをハブにして、ブラウザ間でメッセージをやり取りしてみた。
+	</div>
+</div>
+<div id="20181106" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/06</div>
+			<div class="leftDay">
+TUE</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181106.html">
+RaspberryPiでもGitとGitHubを使う</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+Git</span>
+			<span class="leftCategorySpan">
+GitHub</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+RaspberryPi3B+にはgitが最初からインストールされているので、これを使う。
+ノートを持っているが、ノートとラズパイをSSHでつないでやるのが常套手段かもしれないが、
+ノートを家族が使っているときには、不便だ。なので、GitHubで、共有することにした。
+一人&amp;一台での開発だったので、pullはあまり使わなかったが、これからはpullしてからの作業になるね。<br>
+	</div>
+</div>
+<div id="20181105" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/05</div>
+			<div class="leftDay">
+MON</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181105.html">
+Pithikosさんの<br>websocket-server<br>を立てる</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+SocketServer</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+GitHubのPithikosさんのwebsocket-serverを導入して、サーバー側の時刻をリアルタイムでブラウザ側に表示させてみた。
+	</div>
+</div>
+<div id="20181104" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/04</div>
+			<div class="leftDay">
+SUN</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181104.html">
+MAX31856とR熱電対で温度測定</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+SPI</span>
+			<span class="leftCategorySpan">
+MAX31856</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+MAX31855でRタイプの熱電対を使って、温度を測定した。
+	</div>
+</div>
+<div id="20181103" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/03</div>
+			<div class="leftDay">
+SAT</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181103.html">
+MAX31856とK熱電対で温度測定</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+SPI</span>
+			<span class="leftCategorySpan">
+MAX31856</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+MAX31855でKタイプの熱電対を使って、温度を測定した。今回はRタイプの熱電対も使えるMAX31856を使って温度を測定してみる。
+	</div>
+</div>
+<div id="20181102" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/02</div>
+			<div class="leftDay">
+FRI</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181102.html">
+LAN用NTPサーバーを立てる</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+Raspbian Stretch</span>
+			<span class="leftCategorySpan">
+NTP</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+時刻を合わせるついでに、NTPサーバーについての情報にも触れたので、LAN用にNTPサーバーを立ててみる。設定はデフォルトのままで運用。ポートはそのまま(80)なので、WANからもアクセスできる。
+	</div>
+</div>
+<div id="20181101" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+11/01</div>
+			<div class="leftDay">
+THU</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181101.html">
+ラズパイの時刻合わせ</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+Raspbian Stretch</span>
+			<span class="leftCategorySpan">
+NTP</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+時刻はそんなに気にしていないが、ふと調べてみると、精密な時刻をサーバーで発信している方もおられるほどに、ネットにぶら下がっている機器は、時刻をなるべく合わせて置くものなのかもしれないと思い、時刻サーバーにアクセスしてラズパイの時刻を合わせることにした。
+	</div>
+</div>
+<div id="20181031" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+10/31</div>
+			<div class="leftDay">
+WED</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181031.html">
+光の強度をトップページにのせる</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+Raspbian Stretch</span>
+			<span class="leftCategorySpan">
+Apache2</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+光センサーがどんなものかを試した。MCP3002でSPI通信を使うのだが、SPI0は熱電対用に使っているので、今回はSPI1を使った。SPI1はraspi-configではアンロックされないので、ちょっと手間をかける。
+	</div>
+</div>
+<div id="20181030" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+10/30</div>
+			<div class="leftDay">
+TUE</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181030.html">
+光センサー(CdS)をつなげる</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+Raspbian Stretch</span>
+			<span class="leftCategorySpan">
+SPI1</span>
+			<span class="leftCategorySpan">
+GPIO</span>
+			<span class="leftCategorySpan">
+CdS</span>
+			<span class="leftCategorySpan">
+MCP3002</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+光センサーがどんなものかを試した。MCP3002でSPI通信を使うのだが、SPI0は熱電対用に使っているので、今回はSPI1を使った。SPI1はraspi-configではアンロックされないので、ちょっと手間をかける。
+	</div>
+</div>
+<div id="20181029" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+10/29</div>
+			<div class="leftDay">
+MON</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181029.html">
+Twitter APIの使用申請(3)</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+twitter</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+(1)twitterにwebからAPIの使用申請をし、(2)さらに情報をくれというe-mailに返信をし、(3)そして今回、使用許可を知らせるe-mailが届いた♪
+	</div>
+</div>
+<div id="20181028" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+10/28</div>
+			<div class="leftDay">
+SUN</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181028.html">
+httpsを試す</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+Apache2</span>
+			<span class="leftCategorySpan">
+SSL/TLS</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+httpsでホームページを運用するときに備えて、自前の認証局を作って、その鍵で作った署名をApache2に入れて、ブラウザで表示してみた。
+	</div>
+</div>
+<div id="20181027" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+10/27</div>
+			<div class="leftDay">
+SAT</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181027.html">
+Twitter APIの使用申請(2)</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+twitter</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+webからtwitter APIの使用申請をしたら、e-mailが来て、もっと情報がほしいと書いてあったので、返信した。素で読んでもよくわからなかったので、いちいち翻訳して、返事を書いたので、もったいないからコンテンツとして掲載することにした。
+	</div>
+</div>
+<div id="20181026" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+10/26</div>
+			<div class="leftDay">
+FRI</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181026.html">
+Kタイプ熱電対で測った温度をトップページに表示</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+Raspbian Strech</span>
+			<span class="leftCategorySpan">
+Apache2</span>
+			<span class="leftCategorySpan">
+MAX31855</span>
+			<span class="leftCategorySpan">
+CGI</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+K熱電対とMAX31855で測定した温度を、cronを使って、5分間隔でファイルに保存。CGIが呼び出されたときはそのファイルを読み込んで表示する。
+	</div>
+</div>
+
+
+
+<div id="20181025" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+10/25</div>
+			<div class="leftDay">
+THU</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181025.html">
+CGIからSpiDev()が<span style="font-size:20px">　Permission denided[13]</span></a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+CGI</span>
+			<span class="leftCategorySpan">
+Apache2</span>
+			<span class="leftCategorySpan">
+SPI通信</span>
+			<span class="leftCategorySpan">
+MAX31855</span>
+			<span class="leftCategorySpan">
+SpiDev</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanUnsolved">
+未解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+2018年10月24日の記事で、SpiDevを使いMAX31855との通信に成功。これを、CGIで直接動かそうとするが、Permission Denided [13]が発生。場所はspi.open(0,0)の部分。コマンドラインからの実行はOK。USBの件といい、再びLinuxのパーミッション地獄にハマっている。
+	</div>
+</div>
+
+
+
+<div id="20181024" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+10/24</div>
+			<div class="leftDay">
+WED</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181024.html">
+Kタイプ熱電対で温度を測る</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+RaspberryPi3B+</span>
+			<span class="leftCategorySpan">
+Rasbian stretch</span>
+			<span class="leftCategorySpan">
+SPI通信</span>
+			<span class="leftCategorySpan">
+MAX31855</span>
+			<span class="leftCategorySpan">
+K熱電対</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+2018年10月21日の記事で、SPI通信でA/Dコンバータの値の取得に成功した。2018年10月19日の記事では1-Wire通信に成功し、室温の測定に成功した。<br>
+今回は、もっと高い温度の計測に挑戦しようと考えている。目標温度は1000℃。もちろん、HPで、リアルタイムの温度を見られるようにする。<br>
+	</div>
+</div>
+
+
+
+<div id="20181023" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+10/23</div>
+			<div class="leftDay">
+TUE</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181023.html">
+ディスプレイに表示する画面の設定</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+Raspbian stretch</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+アップデートしたら、いままでちゃんしていたモニターの表示が小さくなりすぎた。ので、設定ファイルを直接変えてみたところうまくいった。<br>
+	</div>
+</div>
+
+
+
+<div id="20181022" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">
+10/22</div>
+			<div class="leftDay">
+MON</div>
+			<div class="leftYear">
+2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="articles/20181022.html">
+Apache2がUSBメモリでForbidden</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">
+Raspbian Stretch</span>
+			<span class="leftCategorySpan">
+Apache2	</span>
+			<span class="leftCategorySpan">
+USBメモリ</span>
+		</div>
+		<div class="leftArticle">
+			<span class="leftArticleSpanUnsolved">
+未解決</span>
+→
+			<span class="leftArticleSpanSolved">
+解決</span>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">
+RaspberryPi3B+ Stretch とかは関係ないのだろうけど、USBに置いたコンテンツをApache2が読んでくれない。エイリアスを指定してあるのだが…<br>
+<span style="color:yellow;font-size:20px;">20181124追記</span>:解決しました。USBメモリのフォーマットとパーミッションの設定で、USBのデータをブラウザで表示できます。詳しくは<a href="20181124.html">こちら</a>を参照。
+	</div>
+</div>
+
+
+
+
+
+<div id="20181021" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">10/21</div>
+			<div class="leftDay">SUN</div>
+			<div class="leftYear">2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181021.html">MCP3002とSPI通信</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">RaspberryPi3B+</span>
+			<span class="leftCategorySpan">Raspbian stretch</span>
+			<span class="leftCategorySpan">MCP3002</span>
+		</div>
+		<div class="leftArticle"><span class="leftArticleSpanSolved">解決</span></div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">A/D変換をしようとMCP3002を定番どおりにつなげ、WiringPiで値を読もうとしたが、抵抗で値を変えているにもかかわらず、0x34が最初にいくつか出たきりであとは0が続く。Raspbianのstretchで SPI通信ができないという記事も目にした。jessieと使うライブラリが違うのかな…<br>
+	なんやかややったけど、結局A/D変換をPython3で読み込めるようになった。</div>
+</div>
+<div id="20181020" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">10/20</div>
+			<div class="leftDay">SAT</div>
+			<div class="leftYear">2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181020.html">python3 日本語でのマイセオリー</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">Python3</span>
+		</div>
+		<div class="leftArticle"><span class="leftArticleSpanSolved">解決</span></div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">Python3で日本語の入出力にハマったので、ファイルの入出力と標準出力の使い方を自分なりに定石化…</div>
+</div>
+<div id="20181019" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">10/19</div>
+			<div class="leftDay">FRI</div>
+			<div class="leftYear">2018</div>
+		</h2>
+		<div class="leftTitle"><a class="leftTitleLink" href="/articles/20181019.html">DHT11で温度と湿度を測った</a></div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">RaspberryPi3B+</span>
+			<span class="leftCategorySpan">Stretch</span>
+			<span class="leftCategorySpan">Gadget</span>
+			<span class="leftCategorySpan">DHT11</span>
+		</div>
+		<div class="leftArticle"><span class="leftArticleSpanSolved">解決</span></div>
+		<div class="leftArticle"></div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">ラズパイ3B+のGPIOと、DHT11温度湿度モジュールをつなげてHPで公開。</div>
+</div>
+<div id="20181018" class="leftContent">
+	<div class="leftUp">
+		<h2 class="leftHead">
+			<div class="leftDate">10/18</div>
+			<div class="leftDay">THU</div>
+			<div class="leftYear">2018</div>
+		</h2>
+		<div class="leftTitle">全て消えた</div>
+		<div class="leftCategory">
+			<span class="leftCategorySpan">RaspberryPi3B+</span>
+			<span class="leftCategorySpan">悲報</span>
+		</div>
+		<div class="leftArticle"><span class="leftArticleSpanUnsolved">未解決</span></div>
+	</div>
+	<div class="clear"></div>
+	<div class="leftBeginning">rebootしたら、差し込んであったバックアップ用のUSBメモリの中まできれいにされてしまった…と思っていたら、USBメモリには保存すらされていなかった。Gooleのキャッシュからhtmlだけはダウンロードしたものの、復旧させる意欲は失せたまま…</div>
+</div>
+
+
+
+<!- コンテンツここまで ->
+
+				</div>
+				<div id="rightColumn">
+					<div class="rightTitles">issue</div>
+					<div class="rightContents">
+					<ul>
+					<li>RasPiとMAX31856が接続されていないときは、正常値として0℃が返されてしまいます。当たり前ですが、FAULTは検出されません。温度測定に入る前に、MAX31856がPINGできるかを確かめなければなりません。
+					</ul>
+					</div>
+					<div class="rightTitles">AD</div>
+					<div class="rightContents"></div>
+					<a href="https://shop.garameki.com"><div class="rightTitles">注文はこちらから</div></a>
+					<div class="rightContents"></div>
+					<div class="rightTitles">カテゴリー</div>
+					<div class="rightContents"></div>
+					<div class="rightTitles">最新記事</div>
+					<div class="rightContents"></div>
+					<div class="rightTitles">シェアしてね</div>
+					<div class="rightContents"></div>
+					<div class="rightTitles">RSS</div>
+					<div class="rightContents"></div>
+					<div class="rightTitles">外部リンク<br>★</div>
+					<div class="rightContents">
+<a href="http://tsukutta.hatenablog.com/entry/2016/01/10/070348">
+ただ素数を数えあげる回路、プッチ神父回路をつくった。</a><br><br>
+					
+					
+					
+					
+					
+					</div>
+					<div class="rightTitles" rel="参考にした記事群。信憑性は保証しませんw">外部リンク<br>(技術)</div>
+					<div class="rightContents">
+
+<a href="https://www.raspberrypi.org/documentation/hardwareaspberrypi/schematicspi_SCH_3bplus_1p0_reduced.pdf">ラズパイ3B+の回路図</a><br>
+<br>
+<a href="http://uguisu.skr.jp/Windows/vi.html">vim便利コマンド集</a><br><br>
+
+<a href="https://qiita.com/moutend/items/534d597cf5c867273319">[Lチカ] Raspberry PiでC言語からSoCのレジスタを操作してGPIOを制御する</a><br><br>
+
+<a href="https://pinout.xyz/pinout/spi">SPI - Serial Peripheral Interface</a><br><br>
+
+<a href="http://tightdev.net/SpiDev_Doc.pdf">SpiDev Documentation</a><br><br>
+
+<a href="https://www.raspberrypi.org/documentation/hardwareaspberrypi/spi/README.md">ラズパイ公式SPIドキュメント</a><br><br>
+
+<a href="https://tool-lab.com/makeaspberrypi-startup-22/">
+ツール・ラボものづくり「ツール」の入門情報＆ガジェット製作記事</a><br><br>
+
+<a href="http://www.neko.ne.jp/~freewingaspberry_piaspberry_pi_3_spi_nfc_rfid_rc522/">
+Raspberry Pi 3に SPI通信方式の NFCリーダライタ RFID-RC522を接続して NFCタグを読む方法></a><br><br>
+
+<a href="https://qiita.com/shyamahira/items/260862743e4c9794b5d2">
+すべてのユーザのホームディレクトリに共通に配布したいファイルがある場合は、事前に/etc/skel内においておく</a><br><br>
+
+<a href="http://www.zuken.co.jp/club_Z/z/analog/007/ana_110224_2.html">
+グラウンドと信号配線のパターン・レイアウトを最適化する(1)</a><br><br>
+
+<a href="http://www.inex.co.jpasbpiasb40-03.html">
+４０-０３)　ラズベリーパイ　Ｃ言語</a><br><br>
+
+<a href="https://stackoverflow.com/questions/25559700/chown-command-returning-operation-not-permitted#25559875">
+chown command returning Operation not permitted</a><br><br>
+
+<a href="https://github.com/neologd/mecab-ipadic-neologd/blob/master/README.ja.md">
+日本語データベース</a><br><br>
+
+<a href="https://www.analog.com/jp/parametricsearch/11146">
+熱電対用のアンプ。Analog Devices社</a><br><br>
+
+<a href="http://wiringpi.com/">
+Wiring Pi/GPIO Interface library for the Raspberry Pi</a><br><br>
+
+<a href="http://jsapachehtml.hatenablog.com/entry/2014/11/23/124350">
+vimで書き込み権限のないユーザでファイルを編集してしまったとき </a><br><br>
+
+<a href="http://tightdev.net/SpiDev_Doc.pdf">
+SpiDevの簡単なマニュアル</a><br><br>
+
+<a href="http://kazmax.zpp.jp/linux_beginner/usermod.html">
+自宅でLinuxサーバー</a><br><br>
+
+<a href="https://qiita.com/makoto1899/items/ef15372d4cf4621a674e">
+独自サーバ認証局(CA)作成とサーバ証明書発行</a><br><br>
+
+<a href="https://hydrocul.github.io/wiki/commands/curl.html">
+curlコマンドの使い方</a><br><br>
+
+<a href="https://letsencrypt.jp/">
+Let's Encrypt 総合ポータル(非公式)</a><br><br>
+
+<a href="http://orange-factory.com/dnf/cgitimeout.html">
+CGIで、処理はバックで走らせつつ、ブラウザには先に返答を返してしまいたいとき</a><br><br>
+
+<a href="https://deviceplus.jp/hobbyaspberrypi_entry_039/">
+気圧、湿度、温度センサーモジュールなんてのもあるぞ</a><br><br>
+
+<a href="https://www.southampton.ac.uk/engineering/about/staff/sjc.page">
+ラズパイの並列計算</a><br><br>
+
+<a href="https://www.magata.net/memo/index.php?%C6%B0%B2%E8%A5%D5%A5%A1%A5%A4%A5%EB%CB%E4%A4%E1%B9%FE%A4%DF%28%A5%B9%A5%C8%A5%EA%A1%BC%A5%DF%A5%F3%A5%B0%C7%DB%BF%AE%29">
+動画ファイル埋め込み(ストリーミング配信) - 闘うITエンジニアの覚え書き</a><br><br>
+
+<a href="https://qiita.com/south37/items/6f92d4268fe676347160">
+WebSocketについて調べてみた。</a><br><br>
+
+<a href="https://postd.cc/you-might-not-need-a-websocket/">
+あなたにWebSocketは必要ないかも</a><br><br>
+
+<a href="https://www.tutorialspoint.com/html5/html5_websocket.htm">
+HTML5 - WebSockets</a><br><br>
+
+<a href="https://github.com/google">
+https://github.com/google</a><br><br>
+
+<a href="https://github.com/julius-speech/julius">
+https://github.com/julius-speech/julius</a><br><br>
+
+<a href="https://qiita.com/yasuhiroki/items/a569d3371a66e365316f">
+curl コマンド 使い方メモ</a><br><br>
+
+<a href="https://stackoverflow.com/questions/2905965/creating-threads-in-python#2906014">
+複数のスレッドを立てるeng.</a><br><br>
+
+<a href="https://git-scm.com/book/ja/v1/Git-%E3%81%AE%E5%9F%BA%E6%9C%AC-%E5%A4%89%E6%9B%B4%E5%86%85%E5%AE%B9%E3%81%AE%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA%E3%81%B8%E3%81%AE%E8%A8%98%E9%8C%B2">
+Git使い方</a><br><br>
+
+<a href="http://blog.livedoor.jp/sce_info3-craft/archives/9297948.html">
+[Python]ある処理を実行しながら、プロセス間通信する</a><br><br>
+
+<a href="https://qiita.com/wanwanland/items/ce272419dde2f95cdabc#search%E9%96%A2%E6%95%B0">
+pythonの文字列マッチング</a><br><br>
+
+<a href="https://qiita.com/1plus4/items/b37ec6ea90569ffdebfe">
+クラスメソッドとスタティックメソッドについて</a><br><br>
+
+<a href="http://diveintopython3-ja.rdy.jp/packaging.html">
+pythonライブラリのパッケージ化</a><br><br>
+
+<a href="http://www.inex.co.jpasbpiasb10-14.html">
+USBメモリの外し方</a><br><br>
+
+<a href="https://debian-handbook.info/browse/ja-JP/stable/sect.apt-get.html">
+apt-getの使い方</a><br><br>
+
+<a href="https://unix.stackexchange.com/questions/267204sync-to-usb-flash-drive-always-transferring-all-data/480847#480847">
+StuckOverFlowに回答</a><br><br>
+
+<a href="http://bandit.way-nifty.com/blog/2014/11aspberry-pi--4.html">
+Raspberry pi の外部記憶追加</a><br><br>
+
+<a href="http://blog.panicblanket.com/archives/4431">
+ext4のUSB外付けHDDにラベルをつける</a><br><br>
+
+<a href="https://qiita.com/takeoverjp/items/5bc9e34e7016bc5b5692">
+RaspberryPi3 Model Bを64bitで動かす</a><br><br>
+
+<a href="https://gihyo.jp/book/2017/978-4-7741-8919-2">
+PICと楽しむ Raspberry Pi活用ガイドブック</a><br><br>
+
+<a href="https://askubuntu.com/questions/1008004/how-to-turn-off-server-signature-in-ubuntu-14-04">
+How to turn off Server Signature in Ubuntu 14.04?</a><br><br>
+
+<a href="https://gootablog.com/php-base64json">
+【PHP】画像をbase64エンコードをしてJSONで扱う</a><br><br>
+
+<a href="https://qiita.com/icoxfog417/items/92214aed64f47dfeade5">
+GitHub APIから学ぶ次世代のAPI実装方式GraphQL</a><br><br>
+
+<a href="https://www.mythic-beasts.com/orderpi">
+Pay for your server annually and get 12 months for the price of 10.</a><br><br>
+
+<a href="https://www.piwheels.org/">
+Python Wheels for the Raspberry Pi</a><br><br>
+
+<a href="https://www.petitmonte.com/javascript/base64_convert.html">
+画像をBase64に変換してHTMLやCSSに埋め込む[リクエスト数の軽減]</a><br><br>
+
+<a href="http://iatlex.com/python/parallel_first#i-6">
+Python で並列処理(初めての人向け)</a><br><br>
+
+<a href="https://qiita.com/iton/items/a397d06b12411ed481fe">
+Raspberry PiにバイナリでTensorFlowをインストールする方法（2018-08-10）</a><br><br>
+
+<a href="https://qiita.com/yubais/items/5a9d91fe03fe715b21d0">
+multiprocessingモジュールによる並列化</a><br><br>
+
+<a href="https://moriawase.net/kaiwa-text">
+画像と吹き出しテキストで会話風にするHTMLとCSS</a><br><br>
+
+<a href="https://gcbgarden.com/2017/05/26/chat-css/">
+【コピペでできる！】CSSでLINEのような会話風吹き出しを作ってみた</a><br><br>
+
+<a href="https://docs.python.jp/3/library/email.examples.html">
+19.1.8. email: 使用例¶(原文)</a><br><br>
+
+<a href="http://httpd.apache.org/docs/2.4/ssl/ssl_howto.html">
+SSL/TLS Strong Encryption: How-To</a><br><br>
+
+<a href="https://qiita.com/bauzer/items/1e7b1b8e0baae6a31f15">
+WEBGL JpegImage使わなくても、base64をblobに変換すればよかったんですね。</a><br><br>
+
+<a href="https://postd.cc/100%E4%B8%87%E5%9B%9E%E3%81%AEwebsocket%E6%8E%A5%E7%B6%9A%E3%81%A8go/">
+100万回のWebSocket接続とGo</a><br><br>
+
+<a href="https://www.sejuku.net/blog/7630">
+人工知能おすすめサイト集</a><br><br>
+
+<a href="https://qiita.com/sqrtxx/items/38a506e59df67cd5d3a1">
+git の監視から逃れる方法</a><br><br>
+
+<a href="https://www.mgo-tec.com/blog-entry-24.html">
+3Dプリンタと基盤発注で本格的な製品を作っているサイト</a><br><br>
+
+<a href="https://qiita.com/undo0530/items/669b6ee6b2277ea64b33">Raspberry Piでスマートロックをつくった</a><br><br>
+
+<a href="https://hesonogoma.com/stocks/japan-all-stock-prices.html">全銘柄の株価</a><br><br>
+
+<a href="https://qiita.com/ksyunnnn/items/e45733b18a9f40f19d78">
+Googleスプレッドシートのデータを表示させてリッチな静的サイトを作る</a><br><br>
+
+<a href="https://www.youtube.com/watch?v=OeZbC6w54I8">
+YouTube : Raspberry Pi Automatic Lock</a><br><br>
+
+<a href="https://www.youtube.com/watch?v=lvtfD_rJ2hE">
+YouTube : カメラを二つ使い、立体を認識</a><br><br>
+
+<a href="https://linq.career-tasu.jp/magazine/knowhow-google-spreadsheet-20technique/">
+マジExcel超え！Googleスプレッドシートの真の力を解放するスゴ技20選</a><br><br>
+
+<a href="https://code.i-harness.com/ja/q/ca9111">
+[html] iOS SafariでWAVファイルを再生する</a><br><br>
+
+<a href="https://pur.store.sony.jp/lifestyle/lineup/mesh/?s_tc=aff_999_0_10_170686&utm_medium=aff&utm_source=001">おもしろ : MESH（メッシュ）	新しいライフスタイル（ソニーストア）</a><br><br>
+
+<a href="https://dev.classmethod.jp/server-side/socket-io-client/">
+node.jsのいろいろなモジュール16 – socket.io-clientで同時接続のテストとか</a><br><br>
+
+<a href="https://arxiv.org/ftp/arxiv/papers/1811/1811.05233.pdf">何かすごいらしい : ImageNet/ResNet-50 Training in 224 Seconds</a><br><br>
+
+<a href="https://shop.sin.jp/c-item-detail?ic=A000000008&gclid=EAIaIQobChMI7Jn_p-rw3gIVDZOPCh2nIwruEAYYASABEgK3F_D_BwE">宝飾業界、ホビー向け光造形プリンター</a><br><br>
+
+<a href="https://www.kabuku.co.jp/developers/3dprinterbot-1">夢でしょ : Raspberry PIとDialogflow & Google Cloud Platformを利用した、3Dプリンターボット(仮)の開発 (概要編)</a><br><br>
+
+<a href="https://dev.classmethod.jp/study_meeting/blockchain_intro/">[社内勉強会 レポート] ブロックチェーン勉強会 #Bitcoin #Ethereum</a><br><br>
+
+<a href="http://catindog.hatenablog.com/entry/2018/03/22/195341">文章をBlockChainで管理する</a><br><br>
+
+<a href="http://ascii.jp/elem/000/001/706/1706182/">MMDでも大人気のCG製作者「かこみき」氏に聞く、3Dモデル製作にTSUKUMOのPCを使う理由</a><br><br>
+
+<a href="https://keras.io/ja/">Keras: Pythonの深層学習ライブラリ</a><br><br>
+
+<a href="https://pytorch.org/">PyTorch : FROM RESEARCH TO PRODUCTION</a><br><br>
+
+<a href="https://qiita.com/perrying/items/857df46bb6cdc3047bd8">実践Pytorch</a><br><br>
+
+<a href="https://www.100shiki.com/archives/2009/03/picascii.html">任意の画像をアスキーアートに変換してくれる『picascii』</a><br><br>
+<a href="https://blog.amedama.jp/entry/2015/08/26/210129">リモートホストと同期してみるの項を参照のこと</a><br><br>
+<a href="https://qiita.com/Halhira/items/1da2ae543217be26988a">ラズパイ設定に関して、なんかいっぱい為になる使えそうなことが乗ってる感じがする</a><br><br>
+<a href=""></a><br><br>
+<a href=""></a><br><br>
+<a href=""></a><br><br>
+<a href=""></a><br><br>
+<a href=""></a><br><br>
+<a href=""></a><br><br>
+<a href=""></a><br><br>
+
+</div>
+					<div class="rightTitles">プロフィール</div>
+					<div class="rightContents">
+						<div style="text-align:center;line-height:10px;margin-bottom:3px;">
+							<font size="15px">
+								<font color="red">ネ</font>
+								<font color="#582555">ア</font>
+								<font color="#8b6ffd">ン</font>
+								<font color="#cd8eef">デ</font>
+								<font color="#befbde">ル</font>
+								<font color="#e5ecaa">タ</font>
+								<font color="#5b3edf">ー</font>
+								<font color="#3ab3bd">ル</font>
+								<font color="#7dcfcc">ニ</font>
+								<font color="#d3eadb">ー</font>
+								<font color="#36aeed">ト</font>
+							</font><br>
+							Neat Neanderthalensis<br>
+						</div>
+新潟のガラメキと、竹久夢二の愛した群馬県伊香保温泉南西相馬山中腹のガラメキ温泉は絶対に関係あるはずと思っている<font style="color:white;">。</font>ガラメキ温泉には有志とともに先祖の名が刻まれた石塔が立っていたが、衆生を救いに下界へと降りていった不動明王とともに行方がわからなくなった<font style="color:white;">。</font>チャーハンとカルボナーラとピーマンの天ぷらと麻婆茄子が得意<font style="color:white;">。</font>たまにうどんもこねる<font style="color:white;">。</font>
+好きな言葉は「摩訶般若波羅蜜多心経<font style="color:white;">。</font>観自在菩薩<font style="color:white;">。</font>行深般若波羅蜜多時<font style="color:white;">。</font>照見五蘊皆空<font style="color:white;">。</font>度一切苦厄<font style="color:white;">。</font>舎利子<font style="color:white;">。</font>色不異空<font style="color:white;">。</font>空不異色<font style="color:white;">。</font>色即是空<font style="color:white;">。</font>空即是色<font style="color:white;">。</font>受想行識<font style="color:white;">。</font>亦復如是<font style="color:white;">。</font>舎利子<font style="color:white;">。</font>是諸法空相<font style="color:white;">。</font>不生不滅<font style="color:white;">。</font>不垢不浄<font style="color:white;">。</font>不増不減<font style="color:white;">。</font>是故空中<font style="color:white;">。</font>無色無受想行識<font style="color:white;">。</font>無眼耳鼻舌身意<font style="color:white;">。</font>無色聲香味觸法<font style="color:white;">。</font>無眼界<font style="color:white;">。</font>乃至無意識界<font style="color:white;">。</font>無無明<font style="color:white;">。</font>亦無無明盡<font style="color:white;">。</font>乃至無老死<font style="color:white;">。</font>亦無老死盡<font style="color:white;">。</font>無苦集滅道<font style="color:white;">。</font>無智亦無得<font style="color:white;">。</font>以無所得故<font style="color:white;">。</font>菩提薩埵依般若波羅蜜多故<font style="color:white;">。</font>心無罣礙<font style="color:white;">。</font>無罣礙故<font style="color:white;">。</font>無有恐怖<font style="color:white;">。</font>遠離一切<font style="color:white;">。</font>顚倒無想<font style="color:white;">。</font>究竟涅槃<font style="color:white;">。</font>三世諸佛<font style="color:white;">。</font>依般若波羅蜜多故<font style="color:white;">。</font>得阿耨多羅三藐三菩提<font style="color:white;">。</font>故知般若波羅蜜多<font style="color:white;">。</font>是大神呪<font style="color:white;">。</font>是大明呪<font style="color:white;">。</font>是無上呪<font style="color:white;">。</font>是無等等呪<font style="color:white;">。</font>能除一切苦<font style="color:white;">。</font>眞實不虚<font style="color:white;">。</font>故説般若波羅蜜多呪<font style="color:white;">。</font>即説呪曰<font style="color:white;">。</font>羯諦羯諦 波羅羯諦 波羅僧羯諦 菩提薩婆訶 般若心経」「たれにきいてもわらってて、あたりまえだということが」「無縄自縛」
+最近ボケが進行、人とのコミュニケーションに支障が出始めた<font style="color:white;">。</font>社会にはそれほど興味はないが、株価と原油価格には反応する<font style="color:white;">。</font>先物買いと称し1リットル64円の灯油を200リットル所有している<font style="color:white;">。</font>一応危険物甲種免許所持<font style="color:white;">。</font>ついでに情報処理応用資格合格証（民主党海江田万里産業大臣署名のプレミアムもの）所持<font style="color:white;">。
+</font>浅草にたまに出没し、おもてなしと称し、外国人に日本文化の象徴であるクールなソウルスナック・ベビスターラーメンを無理やり食わすのが趣味<font style="color:white;">。</font>だいたい7ケ月周期の躁鬱病<font style="color:white;">。</font>だから、なにを始めてもすべて7ヶ月坊主<font style="color:white;">。</font>家族総出の外食はもっぱら_ほっともっと_<font style="color:white;">。</font>channel148のばかデーに参加したいが、本物のばかが行ったのでは迷惑がかかるのではないかと思い、毎年参加を見送っている<font style="color:white;">。</font>
+某自然史博物館「人類の進化クイズ」で月間１位タイ記録を樹立(2018/09/30)
+
+					</div>
+					<div class="rightTitles">カウンター</div>
+					<iframe id="counterIframe" class="rightIframe" src="cgi-bin/counter.py">-</iframe>
+					<div class="rightTitles">DHT11</div>
+					<iframe id="humtemIframe" class="rightIframe" src="cgi-bin/humtem_read.py">-</iframe>
+					<div class="rightTitles">MAX31856<br>real time</div>
+					<div id="temperatureMax31856" style="text-align:center;color:white;"></div>
+					<div class="rightTitles">CdS &amp; MCP3002</div>
+					<iframe id="humtemIframe" class="rightIframe" src="cgi-bin/cds_read.py">-</iframe>
+					<div class="rightTitles"><button onclick="messagetoyou();">本日のあなたへのメッセージ</button></div>
+
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div id="bottom">
+				Powered by RaspberryPi 3 B+,Raspbian 9.4 stretch<br>
+				がらめきドットコム<br>
+				<iframe width="743" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRPQtB0lQ98AkTiIe_0Afs_6aW5PHefleNUVSC2sc9KgV3p_SNXLQ_e5fd6g2H4iqS-k2od6UOLFA6x/pubchart?oid=1819879796&amp;format=interactive"></iframe>			
+		</div>
+	</body>
+</html>
